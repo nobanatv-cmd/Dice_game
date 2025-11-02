@@ -62,13 +62,24 @@ function restartGame() {
 }
 
 function updateRanking() {
-  ranking.push(score);
-  ranking.sort((a, b) => b - a);
+  // 💬 유저 이름 입력
+  const playerName = prompt("이름을 입력하세요:", "플레이어");
+  const nameToSave = playerName && playerName.trim() !== "" ? playerName : "이름없음";
+
+  // 이름 + 점수 저장
+  ranking.push({ name: nameToSave, score: score });
+
+  // 높은 점수 순 정렬
+  ranking.sort((a, b) => b.score - a.score);
+
+  // 상위 10명만 유지
   ranking = ranking.slice(0, 10);
+
+  // 목록 갱신
   rankingListEl.innerHTML = "";
-  ranking.forEach((s) => {
+  ranking.forEach((entry, index) => {
     const li = document.createElement('li');
-    li.textContent = s;
+    li.textContent = `${index + 1}. ${entry.name} — ${entry.score}점`;
     rankingListEl.appendChild(li);
   });
 }
@@ -77,4 +88,5 @@ generateSpecialNumber();
 
 rollBtn.addEventListener('click', rollDice);
 restartBtn.addEventListener('click', restartGame);
+
 
