@@ -1,0 +1,44 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  background-color: #e6f7ff;
+}
+
+.game-container {
+  margin: 50px auto;
+  padding: 20px;
+  width: 400px;
+  border: 3px solid #222;
+  border-radius: 8px;
+  background-color: #fff8f0;
+  box-shadow: 4px 4px 0 #222;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border: 2px solid #333;
+  background: #ffd966;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+.ranking {
+  margin-top: 20px;
+}
+
+#message {
+  font-weight: bold;
+  margin-top: 20px;
+  color: red;
+}
+

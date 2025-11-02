@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>픽셀 주사위 게임 🎲</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>픽셀 주사위 게임 🎲</h1>
+
+    <div class="scoreboard">
+      <p>점수: <span id="score">0</span></p>
+      <p>특별 숫자: <span id="special">-</span></p>
+    </div>
+
+    <div class="dice-section">
+      <button id="rollBtn">주사위 굴리기</button>
+      <button id="restartBtn">다시 시작</button>
+      <p>나온 숫자: <span id="diceValue">-</span></p>
+      <img id="diceImg" src="images/dice1.png" alt="주사위" width="100">
+    </div>
+
+    <div class="ranking">
+      <h2>🏆 상위 10위 랭킹</h2>
+      <ol id="rankingList"></ol>
+    </div>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
